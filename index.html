@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
+    <title>Ice Cream-Home</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -17,43 +17,329 @@
         3.Display Ice Creams
         4.Enquiry Form
         5.Footer-->
-
+        <!--Navigation start--> 
         <nav class="navbar navbar-expand-lg bg-primary "data-bs-theme="dark">
           <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="#">Ice Creams!!</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  <a class="nav-link active" aria-current="page" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
+                  <a class="nav-link" href="about.html">About Us</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                  <a class="nav-link" href="contact.html">Contact Us</a>
                 </li>
-              </ul>
+
               <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <button class="btn btn-light" type="submit">Search</button>
               </form>
             </div>
           </div>
         </nav>
+        <!--Navigation end-->
+        <!--hero starts-->
+        <div id="Hero" class="carousel slide ">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#Hero" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#Hero" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#Hero" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./assets/Images/Ice-Cream1.jpg" class="d-block w-100 " alt="Ice Cream1">
+              <div class="carousel-caption d-none d-sm-block bg-dark">
+                <h2>Ice Cream1</h2>
+                <p>Some representative placeholder content for the first slide.</p>
+              </div>
+        
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/Images/Ice-Cream2.jpg" class="d-block w-100" alt="Ice Cream2">
+              <div class="carousel-caption d-none d-sm-block bg-dark">
+                <h2>Ice Cream2</h2>
+                <p>Some representative placeholder content for the first slide.</p>
+              </div>
+        
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/Images/Ice-Cream3.jpg" class="d-block w-100" alt="Ice Cream3">
+              <div class="carousel-caption d-none d-sm-block bg-dark">
+                <h2>Ice Cream3</h2>
+                <p>Some representative placeholder content for the first slide.</p>
+              </div>
+        
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#HeroIndicatore" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#HeroIndicatore" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!--hero ends-->
+        <!--Ice Cream Products Starts-->
+        <div class="container mt-5">
+          <h2 class="text-center mb-5">Yummy Ice-Creams!!</h2>
+          <div class="row">
+              <!-- Ice Cream 1 -->
+              <div class="col-md-4 mb-4">
+                  <div class="card">
+                      <img src="https://via.placeholder.com/150" class="card-img-top" alt="Vanilla Ice Cream">
+                      <div class="card-body">
+                          <h5 class="card-title">Vanilla Ice Cream</h5>
+                          <p class="card-text">Creamy and rich vanilla flavor, made with the finest ingredients.</p>
+                          <p class="price">
+                            <span class="discount">10% off</span>
+                            <span class="original-price text-decoration-line-through">₹230</span>
+                            <span class="final-price">₹207</span>
+                        </p>                                    
+                          <a href="#" class="btn btn-primary">View</a>
+                          <a href="#" class="btn btn-success">Add to Cart</a>
+                      </div>
+                  </div>
+              </div>
+              <!-- Ice Cream 2 -->
+              <div class="col-md-4 mb-4">
+                  <div class="card">
+                      <img src="https://via.placeholder.com/150" class="card-img-top" alt="Chocolate Ice Cream">
+                      <div class="card-body">
+                          <h5 class="card-title">Chocolate Ice Cream</h5>
+                          <p class="card-text">Decadent and smooth chocolate ice cream that melts in your mouth.</p>
+                          <p class="price">
+                            <span class="discount">10% off</span>
+                            <span class="original-price text-decoration-line-through">₹230</span>
+                            <span class="final-price">₹207</span>
+                        </p>                                    
+                          <a href="#" class="btn btn-primary">View</a>
+                          <a href="#" class="btn btn-success">Add to Cart</a>
+                      </div>
+                  </div>
+              </div>
+              <!-- Ice Cream 3 -->
+              <div class="col-md-4 mb-4">
+                  <div class="card">
+                      <img src="https://via.placeholder.com/150" class="card-img-top" alt="Strawberry Ice Cream">
+                      <div class="card-body">
+                          <h5 class="card-title">Strawberry Ice Cream</h5>
+                          <p class="card-text">Fresh and fruity strawberry ice cream made with real berries.</p>
+                          <p class="price">
+                            <span class="discount">10% off</span>
+                            <span class="original-price text-decoration-line-through">₹215</span>
+                            <span class="final-price">₹193.5</span>
+                        </p>                                    
+                          <a href="#" class="btn btn-primary">View</a>
+                          <a href="#" class="btn btn-success">Add to Cart</a>
+                      </div>
+                  </div>
+              </div>
+              <!-- Ice Cream 4 -->
+              <div class="col-md-4 mb-4">
+                  <div class="card">
+                      <img src="https://via.placeholder.com/150" class="card-img-top" alt="Mint Chocolate Chip">
+                      <div class="card-body">
+                          <h5 class="card-title">Mint Chocolate Chip</h5>
+                          <p class="card-text">Cool mint ice cream with rich chocolate chips throughout.</p>
+                          <p class="price">
+                            <span class="discount">10% off</span>
+                            <span class="original-price text-decoration-line-through">₹300</span>
+                            <span class="final-price">₹270</span>
+                        </p>                                    
+                          <a href="#" class="btn btn-primary">View</a>
+                          <a href="#" class="btn btn-success">Add to Cart</a>
+                      </div>
+                  </div>
+              </div>
+              <!-- Ice Cream 5 -->
+              <div class="col-md-4 mb-4">
+                  <div class="card">
+                      <img src="https://via.placeholder.com/150" class="card-img-top" alt="Butter Pecan">
+                      <div class="card-body">
+                          <h5 class="card-title">Butter Pecan</h5>
+                          <p class="card-text">Creamy butter pecan ice cream with crunchy pecan pieces.</p>
+                          <p class="price">
+                            <span class="discount">10% off</span>
+                            <span class="original-price text-decoration-line-through">₹230</span>
+                            <span class="final-price">₹207</span>
+                        </p>                                    
+                          <a href="#" class="btn btn-primary">View</a>
+                          <a href="#" class="btn btn-success">Add to Cart</a>
+                      </div>
+                  </div>
+              </div>
+              <!-- Ice Cream 6 -->
+              <div class="col-md-4 mb-4">
+                  <div class="card">
+                      <img src="https://via.placeholder.com/150" class="card-img-top" alt="Rocky Road">
+                      <div class="card-body">
+                          <h5 class="card-title">Rocky Road</h5>
+                          <p class="card-text">Chocolate ice cream with marshmallows and nuts mixed in.</p>
+                          <p class="price">
+                            <span class="discount">10% off</span>
+                            <span class="original-price text-decoration-line-through">₹750</span>
+                            <span class="final-price">₹675</span>
+                        </p>                                    
+                          <a href="#" class="btn btn-primary">View</a>
+                          <a href="#" class="btn btn-success">Add to Cart</a>
+                      </div>
+                  </div>
+              </div>
+              <!-- Ice Cream 7 -->
+              <div class="col-md-4 mb-4">
+                  <div class="card">
+                      <img src="https://via.placeholder.com/150" class="card-img-top" alt="Mango Sorbet">
+                      <div class="card-body">
+                          <h5 class="card-title">Mango Sorbet</h5>
+                          <p class="card-text">Refreshing mango sorbet made with ripe, juicy mangoes.</p>
+                          <p class="price">
+                            <span class="discount">10% off</span>
+                            <span class="original-price text-decoration-line-through">₹640</span>
+                            <span class="final-price">₹576</span>
+                        </p>                                    
+                          <a href="#" class="btn btn-primary">View</a>
+                          <a href="#" class="btn btn-success">Add to Cart</a>
+                      </div>
+                  </div>
+              </div>
+              <!-- Ice Cream 8 -->
+              <div class="col-md-4 mb-4">
+                  <div class="card">
+                      <img src="https://via.placeholder.com/150" class="card-img-top" alt="Cookie Dough">
+                      <div class="card-body">
+                          <h5 class="card-title">Cookie Dough</h5>
+                          <p class="card-text">Vanilla ice cream loaded with chunks of cookie dough.</p>
+                          <p class="price">
+                            <span class="discount">10% off</span>
+                            <span class="original-price text-decoration-line-through">₹2000</span>
+                            <span class="final-price">₹1800</span>
+                        </p>                                    
+                          <a href="#" class="btn btn-primary">View</a>
+                          <a href="#" class="btn btn-success">Add to Cart</a>
+                      </div>
+                  </div>
+              </div>
+              <!-- Ice Cream 9 -->
+              <div class="col-md-4 mb-4">
+                  <div class="card">
+                      <img src="https://via.placeholder.com/150" class="card-img-top" alt="Pistachio Ice Cream">
+                      <p class="price">
+                        <span class="discount">10% off</span>
+                        <span class="original-price text-decoration-line-through">₹850</span>
+                        <span class="final-price">₹765</span>
+                    </p>                                    
+                      <div class="card-body">
+                          <h5 class="card-title">Pistachio Ice Cream</h5>
+                          <p class="card-text">Nutty pistachio ice cream with real pistachio pieces.</p>
+                          <a href="#" class="btn btn-primary">View</a>
+                          <a href="#" class="btn btn-success">Add to Cart</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+                <!--Ice Cream Products Ends-->
+                <!--Enqury Form Starts-->
+                <div class="container-fluid mt-5 bg-primary-subtle">
+                  <h2 class="text-center mb-5">Ice Cream Enquiry Form</h2>
+                  <form class="container">
+                      <div class="row">
+                          <div class="form-group col-md-6">
+                              <label for="firstName">First Name</label>
+                              <input type="text" class="form-control" id="firstName" placeholder="Enter your first name">
+                          </div>
+                          <div class="form-group col-md-6">
+                              <label for="lastName">Last Name</label>
+                              <input type="text" class="form-control" id="lastName" placeholder="Enter your last name">
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="form-group col-md-6">
+                              <label for="mobile">Mobile</label>
+                              <input type="text" class="form-control" id="mobile" placeholder="Enter your mobile number">
+                          </div>
+                          <div class="form-group col-md-6">
+                              <label for="email">Email Address</label>
+                              <input type="email" class="form-control" id="email" placeholder="Enter your email address">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label for="product">Select Ice Cream Product</label>
+                          <select id="product" class="form-control">
+                              <option selected>Choose...</option>
+                              <option>Vanilla Ice Cream</option>
+                              <option>Chocolate Ice Cream</option>
+                              <option>Strawberry Ice Cream</option>
+                              <option>Mint Chocolate Chip</option>
+                              <option>Butter Pecan</option>
+                              <option>Rocky Road</option>
+                              <option>Mango Sorbet</option>
+                              <option>Cookie Dough</option>
+                              <option>Pistachio Ice Cream</option>
+                          </select>
+                      </div>
+                      <div class="form-group">
+                          <label for="enquiryMessage">Enquiry Message</label>
+                          <textarea class="form-control" id="enquiryMessage" rows="4" placeholder="Enter your message here"></textarea>
+                      </div>
+                      <div class="d-flex justify-content-end my-2">
+                        <button type="submit" class="btn btn-primary btn-block">Submit</button> 
+                      </div>
+                  </form>
+              </div>
+          
+                <!--Enqury Form Ends-->
+                <!--Footer starts-->
+<footer class="bg-dark text-white py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h5>About Us</h5>
+        <p>We are a company dedicated to providing high-quality ice cream products. Our mission is to bring joy and happiness to our customers through our delicious treats.</p>
+      </div>
+      <div class="col-md-4">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white">Home</a></li>
+          <li><a href="#" class="text-white">About</a></li>
+          <li><a href="#" class="text-white">Products</a></li>
+          <li><a href="#" class="text-white">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h5>Contact Us</h5>
+        <ul class="list-unstyled">
+          <li><i class="fas fa-map-marker-alt me-2"></i>5-159/1 Belman, Udupi, karnataka,576111</li>
+          <li><i class="fas fa-phone me-2"></i>+91 8310376104</li>
+          <li><i class="fas fa-envelope me-2"></i>info@icecreamshop.com</li>
+        </ul>
+      </div>
+    </div>
+    <hr class="my-4">
+    <div class="row">
+      <div class="col-md-6">
+        <p>&copy; 2024 Ice Cream Shop. All rights reserved.</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-facebook fa-lg"></i></a></li>
+          <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-twitter fa-lg"></i></a></li>
+          <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-instagram fa-lg"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--Footer ends-->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -69,5 +355,6 @@
       integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
       crossorigin="anonymous"
     ></script>
+    <script src="./assets/js/app.js"></script>
   </body>
 </html>
