@@ -102,30 +102,31 @@
                 <!--Enqury Form Starts-->
                 <div class="container-fluid mt-5 bg-primary-subtle">
                   <h2 class="text-center mb-5">Ice Cream Enquiry Form</h2>
-                  <form class="container">
+                  <form class="container" method="POST" id="enquiryForm">
+                    <input type="number" step="0.01">
                       <div class="row">
                           <div class="form-group col-md-6">
                               <label for="firstName">First Name</label>
-                              <input type="text" class="form-control" id="firstName" placeholder="Enter your first name">
+                              <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter your first name" required aria-required="true" minlength="2" maxlength="20" title="Enter Your First Name">
                           </div>
                           <div class="form-group col-md-6">
                               <label for="lastName">Last Name</label>
-                              <input type="text" class="form-control" id="lastName" placeholder="Enter your last name">
+                              <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter your last name" required aria-required="true" minlength="2" maxlength="20" title="Enter Your Last Name">
                           </div>
                       </div>
                       <div class="row">
                           <div class="form-group col-md-6">
                               <label for="mobile">Mobile</label>
-                              <input type="text" class="form-control" id="mobile" placeholder="Enter your mobile number">
+                              <input type="text" class="form-control" id="mobile" name="Mobile" placeholder="Enter your mobile number">
                           </div>
                           <div class="form-group col-md-6">
                               <label for="email">Email Address</label>
-                              <input type="email" class="form-control" id="email" placeholder="Enter your email address">
+                              <input type="email" class="form-control" id="email" name="Email" placeholder="Enter your email address">
                           </div>
                       </div>
                       <div class="form-group">
                           <label for="product">Select Ice Cream Product</label>
-                          <select id="product" class="form-control">
+                          <select id="product" class="form-control" name="product">
                               <option selected>Choose...</option>
                               <option>Vanilla Ice Cream</option>
                               <option>Chocolate Ice Cream</option>
@@ -140,11 +141,12 @@
                       </div>
                       <div class="form-group">
                           <label for="enquiryMessage">Enquiry Message</label>
-                          <textarea class="form-control" id="enquiryMessage" rows="4" placeholder="Enter your message here"></textarea>
+                          <textarea class="form-control" id="enquiryMessage" rows="4" placeholder="Enter your message here" name="enquiryMessage" required minlength="10" maxlength="1024"></textarea>
                       </div>
                       <div class="d-flex justify-content-end my-2">
                         <button type="submit" class="btn btn-primary btn-block">Submit</button> 
                       </div>
+                      <div id="errorMessages"></div>
                   </form>
               </div>
           
