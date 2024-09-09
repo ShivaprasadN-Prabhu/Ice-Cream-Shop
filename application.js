@@ -197,59 +197,45 @@ products.forEach((product) => {
 });
 
 const enquiryForm = document.getElementById("enquiryForm");
+
 enquiryForm.addEventListener("submit", function (event) {
   event.preventDefault();
   console.log("submit button clicked");
+  
   let isValid = true;
   let errorMessages = [];
-  
+
   // Clear previous error messages
-  document.getElementById("errorMessages").innerHTML = '';
+  document.getElementById("errorMessage").innerHTML = '';
+  
   const firstName = event.target.elements.firstName.value.trim();
   const lastName = event.target.elements.lastName.value.trim();
   const mobile = event.target.elements.mobile.value.trim();
   const email = event.target.elements.email.value.trim();
   const icecreamProducts = event.target.elements.icecreamProducts.value.trim();
   const enquiryMessage = event.target.elements.enquiryMessage.value.trim();
-  console.log(
-    `First Name: ${firstName}, 
-      Last Name: ${lastName}, 
-      Mobile: ${mobile},
-      Email: ${email},
-      Ice Cream Products: ${icecreamProducts}, 
-      Enquiry Message: ${enquiryMessage}`
-  );
-  // First Name validation
-  if (firstName.length < 2) {
+
+  console.log(`First Name: ${firstName}, Last Name: ${lastName}, Mobile: ${mobile}, Email: ${email}, Ice Cream Products: ${icecreamProducts}, Enquiry Message: ${enquiryMessage}`);
+
+  // Validation logic
+  if (firstName.length < 2 || firstName.length > 20) {
     isValid = false;
-    errorMessages.push("First Name must be at least 2 characters long");
+    errorMessages.push("First Name must be between 2 and 20 characters long");
   }
-  if (firstName.length > 20) {
+  if (lastName.length < 2 || lastName.length > 20) {
     isValid = false;
-    errorMessages.push("First Name must be at most 20 characters long");
+    errorMessages.push("Last Name must be between 2 and 20 characters long");
   }
-  // Last Name validation
-  if (lastName.length < 2) {
-    isValid = false;
-    errorMessages.push("Last Name must be at least 2 characters long");
-  }
-  if (lastName.length > 20) {
-    isValid = false;
-    errorMessages.push("Last Name must be at most 20 characters long");
-  }
-  // Mobile validation (Indian mobile number format)
   const mobilePattern = /^[6-9]\d{9}$/;
   if (!mobilePattern.test(mobile)) {
     isValid = false;
     errorMessages.push("Mobile number must be a valid 10-digit number");
   }
-  // Email validation
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailPattern.test(email)) {
     isValid = false;
     errorMessages.push("Email must be a valid email address");
   }
-  // Ice Cream Products validation
   const icecreamProductsOption = [
     "Vanilla Ice Cream",
     "Chocolate Ice Cream",
@@ -265,16 +251,12 @@ enquiryForm.addEventListener("submit", function (event) {
     isValid = false;
     errorMessages.push("Please select a valid ice cream product");
   }
-  // Enquiry Message validation
-  if (enquiryMessage.length < 10) {
+  if (enquiryMessage.length < 10 || enquiryMessage.length > 1024) {
     isValid = false;
-    errorMessages.push("Enquiry Message must be at least 10 characters long");
+    errorMessages.push("Enquiry Message must be between 10 and 1024 characters long");
   }
-  if (enquiryMessage.length > 1024) {
-    isValid = false;
-    errorMessages.push("Enquiry Message must be at most 1024 characters long");
-  }
-  // If form is invalid, show error messages
+
+  // Show error messages if invalid
   if (!isValid) {
     errorMessages.forEach((message) => {
       createAndAppendElement("div", 
@@ -282,29 +264,29 @@ enquiryForm.addEventListener("submit", function (event) {
         message, "#errorMessage");
     });
   } else {
-    // If form is valid, submit it and reset the form
+    // Submit the form data if valid
     fetch(`https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjYwNTZkMDYzNzA0MzE1MjY5NTUzNDUxMzci_pc`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      firstName,
-      lastName,
-      mobile,
-      email,
-      icecreamProducts,
-      enquiryMessage,
-    }),
-  }).then((response) => {
-    if (response.ok) {
-      console.log("Form submitted successfully");
-    } else {
-      console.error("Form submission failed");
-    }
-  });
-    //enquiryForm.reset();
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        firstName,
+        lastName,
+        mobile,
+        email,
+        icecreamProducts,
+        enquiryMessage,
+      }),
+    })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("Form submitted successfully:", data);
+      enquiryForm.reset(); // Clear form if successful
+    })
+    .catch((error) => {
+      console.error("Form submission error:", error);
+    });
   }
 });
-
-
+    
